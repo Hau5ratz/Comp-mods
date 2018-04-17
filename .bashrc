@@ -1,5 +1,3 @@
-# Comp-mods
-
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
@@ -295,11 +293,21 @@ fi
 # Command-Ctrl-F : Toggle maxi\n'''
 
 
-# this is the file to edit bash profile commands
-#H='''
-#Hello\n
-#Source file is located at: ~/.bashrc
-#'''
+
+
+
+
+# Custom Aliases and functions:
+alias h="sed -n 300,400p ~/.bashrc"
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias l="ls -Fhot"
+alias c="clear"
+alias reload="source ~/.bashrc"
+alias redhat="ssh -l dc-user -p 2222 ech-10-157-142-19.mastercard.int"
+alias house="ssh -l dc-user -p 4444 ech-10-157-132-51.mastercard.int"
+alias rscanners="rsync -azP -e 'ssh -l dc-user -p 2222' ~/Desktop/Hau5ratz/Sup_py/wip/datadbmine/Scanners/ dc-user@ech-10-157-142-19.mastercard.int:/home/dc-user/wip/datadbmine/Scanners"
+alias rshift="rsync -azP -e 'ssh -l dc-user -p 2222' ~/Desktop/Hau5ratz/Sup_py/wip/ dc-user@ech-10-157-142-19.mastercard.int:/home/dc-user/wip/"
+alias rpull="rsync -azP -e 'ssh -l dc-user -p 2222' dc-user@ech-10-157-142-19.mastercard.int:/home/dc-user/wip/ ~/Desktop/Hau5ratz/Sup_py/wip "
 
 ss() {
   filename=$1'.sh'
@@ -308,13 +316,12 @@ ss() {
   }
 pys() {
   filename=$1'.py'
-  echo '#!/usr/bin/python3.6' > $filename 
+  printf '#!/usr/bin/python3.6\n__author__ = "Nicholas Rademaker"\n__copyright__ = "Me I will fight you"\n__credits__ = ["Nicholas Rademaker"]\n__license__ = "None"\n__version__ = "0"\n__maintainer__ = "Nicholas Rademaker"\n__email__ = "nrademaker@gm.slc.edu"\n__status__ = "Developing"' > $filename 
   subl $filename
   }
-
-#alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-alias l="ls -Fhota"
-alias c="clear"
-alias h="echo -e \$H"
-alias hotkeys="echo -e \$HK"
-alias reload="source ~/.bashrc"
+fpath() {
+  path=$@
+  echo
+  echo "Your formated path is the following:"
+  echo "${path// /\\ }"  
+  }
