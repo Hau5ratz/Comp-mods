@@ -73,7 +73,10 @@ alias df='df -kTh'
 
 alias h="sed -n 300,400p ~/.bashrc"
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-alias l="ls -Fhot"
+if [ ! $(id -un) == 'u0_a278' ]
+then
+  alias l="ls -Fhot"
+fi
 alias c="clear"
 alias reload="source ~/.bashrc"
 alias wiggle="python2.7 ~/.python/wiggle.py"
