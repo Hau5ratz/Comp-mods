@@ -78,10 +78,14 @@ alias c="clear"
 alias reload="source ~/.bashrc"
 alias wiggle="python2.7 ~/.python/wiggle.py"
 #-------------------------------------------------------------
-## These are for ssh in mc (this assumes you are my home terminal).
+## These are for ssh in mc (this assumes you are my work terminal).
 ##-------------------------------------------------------------
-#alias redhat="ssh -l dc-user -p 2222 ech-10-157-142-19.mastercard.int"
-#alias house="ssh -l dc-user -p 4444 ech-10-157-132-51.mastercard.int"
-#alias rscanners="rsync -azP -e 'ssh -l dc-user -p 2222' ~/Desktop/Hau5ratz/Sup_py/wip/datadbmine/Scanners/ dc-user@ech-10-157-142-19.mastercard.int:/home/dc-user/wip/datadbmine/Scanners"
-#alias rshift="rsync -azP -e 'ssh -l dc-user -p 2222' ~/Desktop/Hau5ratz/Sup_py/wip/ dc-user@ech-10-157-142-19.mastercard.int:/home/dc-user/wip/"
-#alias rpull="rsync -azP -e 'ssh -l dc-user -p 2222' dc-user@ech-10-157-142-19.mastercard.int:/home/dc-user/wip/ ~/Desktop/Hau5ratz/Sup_py/wip "
+# command colorful
+if [ ! $(id -un) == 'e065057' ]
+then
+  alias redhat="ssh -l dc-user -p 2222 ech-10-157-142-19.mastercard.int"
+  alias house="ssh -l dc-user -p 4444 ech-10-157-132-51.mastercard.int"
+  alias rscanners="rsync -azP -e 'ssh -l dc-user -p 2222' ~/Desktop/Hau5ratz/Sup_py/wip/datadbmine/Scanners/ dc-user@ech-10-157-142-19.mastercard.int:/home/dc-user/wip/datadbmine/Scanners"
+  alias rshift="rsync -azP -e 'ssh -l dc-user -p 2222' ~/Desktop/Hau5ratz/Sup_py/wip/ dc-user@ech-10-157-142-19.mastercard.int:/home/dc-user/wip/"
+  alias rpull="rsync -azP -e 'ssh -l dc-user -p 2222' dc-user@ech-10-157-142-19.mastercard.int:/home/dc-user/wip/ ~/Desktop/Hau5ratz/Sup_py/wip "
+fi
