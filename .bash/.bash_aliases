@@ -5,6 +5,7 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
 # command colorful
+# May not work with work computer
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
