@@ -81,7 +81,7 @@ alias wiggle="python2.7 ~/.python/wiggle.py"
 ## These are for ssh in mc (this assumes you are my work terminal).
 ##-------------------------------------------------------------
 # command colorful
-if [ ! $(id -un) == 'e065057' ]
+if [ $(id -un) == 'e065057' ]
 then
   alias redhat="ssh -l dc-user -p 2222 ech-10-157-142-19.mastercard.int"
   alias house="ssh -l dc-user -p 4444 ech-10-157-132-51.mastercard.int"
