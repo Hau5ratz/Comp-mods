@@ -77,6 +77,8 @@ alias l="ls -Fhot"
 alias c="clear"
 alias reload="source ~/.bashrc"
 alias wiggle="python2.7 ~/.python/wiggle.py"
+alias pepsi2="python2.7 ~/.python/pepsi.py"
+
 #-------------------------------------------------------------
 ## These are for ssh in mc (this assumes you are my work terminal).
 ##-------------------------------------------------------------
