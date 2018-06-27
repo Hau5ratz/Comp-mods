@@ -292,3 +292,4 @@ fi
 # Command-H : hide active window\n
 # Command-Ctrl-F : Toggle maxi\n'''
 
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
