@@ -94,3 +94,9 @@ then
   alias rshift="rsync -azP -e 'ssh -l dc-user -p 2222' ~/Desktop/Hau5ratz/Sup_py/wip/ dc-user@ech-10-157-142-19.mastercard.int:/home/dc-user/wip/"
   alias rpull="rsync -azP -e 'ssh -l dc-user -p 2222' dc-user@ech-10-157-142-19.mastercard.int:/home/dc-user/wip/ ~/Desktop/Hau5ratz/Sup_py/wip "
 fi
+
+if [ $(id -un) == 'u0_a278' ]
+then
+  alias house="ssh -p 22 hau5ratz@72.225.204.200"
+  alias pdown="rsync -avo -e 'ssh' hau5ratz@72.225.204.200:/home/hau5ratz/porn ."
+fi
